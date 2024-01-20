@@ -1,0 +1,13 @@
+compact: true
+download-external-modules: false
+external-modules-download-path: .external_modules
+evaluate-variables: true
+framework:
+  - all
+no-guide: true
+quiet: true
+skip-check:
+  - CKV_AWS_272 # Ensure AWS Lambda function is configured to validate code-signing
+skip-fixes: true
+skip-suppressions: true
+soft-fail: false

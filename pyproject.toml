@@ -1,0 +1,39 @@
+[tool.autopep8]
+aggressive = 3
+exclude = "./cdk.out/*"
+in-place = true
+recursive = true
+
+[tool.bandit]
+exclude_dirs = [
+  ".env",
+  "cdk.out",
+]
+
+[tool.commitizen]
+bump_message = "chore(release): $new_version"
+update_changelog_on_bump = true
+version = "0.3.11"
+
+[tool.pytest.ini_options]
+env = [
+  "TABLE_NAME=jobs",
+  "TIMEOUT=300",
+]
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''

@@ -1,0 +1,4 @@
+[flake8]
+ignore = E203, E501, W503, E731, C901, W605
+max-line-length = 120
+max-complexity = 17

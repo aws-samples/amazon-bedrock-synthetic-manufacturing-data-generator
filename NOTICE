@@ -1,0 +1,9 @@
+Copyright 2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+**********************
+THIRD PARTY COMPONENTS
+**********************
+This software includes third party software subject to the following copyrights:
+
+boto3 under the Apache License Version 2.0
+botocore under the Apache License Version 2.0

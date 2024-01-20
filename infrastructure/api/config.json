@@ -1,0 +1,8 @@
+{
+    "code_dir": "apis",
+    "timeout": 60,
+    "memory_size": 256,
+    "ephemeral_storage_size": 512,
+    "handler": "app.index",
+    "column_name": "active"
+}

@@ -1,0 +1,8 @@
+pandas
+numpy
+urllib3
+boto3
+langchain
+beautifulsoup4
+lxml
+markdown

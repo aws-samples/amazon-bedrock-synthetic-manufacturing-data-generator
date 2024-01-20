@@ -1,0 +1,32 @@
+{
+    "app": "python3 app.py",
+    "watch": {
+        "include": [
+            "**"
+        ],
+        "exclude": [
+            "README.md",
+            "cdk*.json",
+            "requirements*.txt",
+            "source.bat",
+            "**/__init__.py",
+            "*.DS_Store",
+            "__pycache__",
+            "python/__pycache__",
+            "tests"
+        ]
+    },
+    "context": {
+        "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+        "@aws-cdk/core:stackRelativeExports": true,
+        "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+        "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+        "@aws-cdk/core:target-partitions": [
+            "aws",
+            "aws-cn"
+        ]
+    },
+    "dependencies": {
+        "aws-cdk": "^2.1.0"
+    }
+}

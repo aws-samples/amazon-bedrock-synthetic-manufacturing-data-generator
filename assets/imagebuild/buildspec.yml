@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing Python Libraries
+      # Extracting endpoint information using jq based on region and sed to strip off the quotes at both ends of the string.
+      - pip install -r requirements.txt --upgrade
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Running the main Python file
+      - python main.py --code-bucket "$CODE_BUCKET" --data-bucket "$DATA_BUCKET" --table-name "$TABLE_NAME" --column-name "$COLUMN_NAME" --model-id "$MODEL_ID"
+      - echo $(ls -l)
+      - chmod +x deploy.sh
+      - bash deploy.sh
+  post_build:
+    commands:
+      - echo Build completed on `date`

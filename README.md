@@ -127,6 +127,18 @@ cdk deploy --all --require-approval never
 
 The `-—all` flag ensures that all components are installed at once. By specifying `-—require-approval` never you won’t need to approve each component to be deployed.
 
+## Tips
+* `cdk deploy` requires `docker`. If you are using docker alternatives like [finch]([runfinch/finch: The Finch CLI an open source client for container development](https://github.com/runfinch/finch)). you need to export this environment variable before running `cdk` commands:
+
+	```
+	export CDK_DOCKER=finch
+	```
+* You can override the default deployment region by setting
+	```
+	export AWS_REGION=eu-west-1
+	```
+
+
 
 ## Contributing
 If you wish to contribute to the project, please see the [Contribution Guidelines](./CONTRIBUTING.md).

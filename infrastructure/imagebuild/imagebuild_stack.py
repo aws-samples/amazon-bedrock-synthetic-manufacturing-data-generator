@@ -92,7 +92,9 @@ class ImagebuildStack(Stack):
                             ],
                             resources=[
                                 backend.data_bucket.bucket_arn,
+                                backend.data_bucket.bucket_arn + "/*",
                                 backend.code_bucket.bucket_arn,
+                                backend.code_bucket.bucket_arn + "/*",
                             ],
                         ),
                         iam.PolicyStatement(
